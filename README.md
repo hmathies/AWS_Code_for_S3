@@ -1,4 +1,4 @@
-# Influent Metrix AWS
+#  AWS Code
 
 This is a repository with code I wrote for uploading and downloading to an AWS S3 bucket using React and NodeJs. 
 
