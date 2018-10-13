@@ -1,0 +1,10 @@
+prod
+test
+node_modules
+*credentials.json
+*.log
+*.lock
+package-lock.json
+.env*
+.vscode
+.c9
