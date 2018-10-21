@@ -11,7 +11,7 @@ module.exports = {
             region: 'us-east-1'
         })
         
-        const myBucket = 'influentmetricsdev'
+        const myBucket = 'bucketName'
         const { type, name } = args
         const signedUrlExpireSeconds = 60 * 1
         
