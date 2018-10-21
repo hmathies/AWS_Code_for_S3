@@ -6,8 +6,8 @@ import './custom.css'
 const AWS = require('aws-sdk')
 const moment = require('moment')
 
-const AWS_ACCESS_KEY_ID = 'AKIAJSSV2U7WEB6EDUKA'
-const AWS_SECRET_ACCESS_KEY = '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'
+const AWS_ACCESS_KEY_ID = ''
+const AWS_SECRET_ACCESS_KEY = ''
 
 AWS.config.update({
     accessKeyId: AWS_ACCESS_KEY_ID,
@@ -68,7 +68,7 @@ export default class Data extends React.Component {
     gathers3Files = () => {
         return new Promise((resolve, reject) => {
             const s3params = {
-                Bucket: 'influentdevtest',
+                Bucket: 'bucketName',
                 MaxKeys: 20,
                 Delimiter: '/'
             }
@@ -104,7 +104,7 @@ export default class Data extends React.Component {
             reader.onload = e => {
                 const s3 = new AWS.S3()
                 s3.putObject({
-                    Bucket: 'influentdevtest',
+                    Bucket: 'bucketName',
                     Key: file.name,
                     Body: e.target.result,
                     ACL: 'public-read'
